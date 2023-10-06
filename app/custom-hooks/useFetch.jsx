@@ -15,6 +15,7 @@ const useFetch = () => {
       const json = await res.json();
       if (!res.ok) throw new Error(json.error);
       setState((prev) => ({ ...prev, loading: false, data: json }));
+      return true;
     } catch (error) {
       setState((prev) => ({
         ...prev,
@@ -22,6 +23,7 @@ const useFetch = () => {
         error:
           error instanceof Error ? error.message : 'Oops, algo deu errado.',
       }));
+      return false;
     }
   };
 

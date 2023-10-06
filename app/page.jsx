@@ -1,5 +1,5 @@
-import Form from './components/form/Form';
+import ContactForm from './components/form/ContactForm';
 
 export default function Home() {
-  return <Form />;
+  return <ContactForm />;
 }

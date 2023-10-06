@@ -12,6 +12,7 @@ On the root, create a `.env.local`:
 ```env
 MONGO_URI=
 JWT_SECRET=
+BCRYPT_SALT=
 ADMIN_PASSWORD=
 ```
 

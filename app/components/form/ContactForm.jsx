@@ -4,7 +4,7 @@ import useFetch from '../../custom-hooks/useFetch';
 import Input from './Input';
 import Textarea from './Textarea';
 
-const Form = () => {
+const ContactForm = () => {
   const { data, loading, error, request } = useFetch();
   const nameInput = useInput('nome', 'Nome');
   const emailInput = useInput('email', 'Email', 'email');
@@ -22,11 +22,11 @@ const Form = () => {
       branch: branchInput.refe.current.value,
       message: messageTextArea.refe.current.value,
     };
-    await request('/api/enviar-form', {
+    const success = await request('/api/enviar-form', {
       method: 'POST',
       body: JSON.stringify(form),
     });
-    if (data) {
+    if (success) {
       nameInput.refe.current.value = '';
       emailInput.refe.current.value = '';
       branchInput.refe.current.value = '';
@@ -47,4 +47,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ContactForm;

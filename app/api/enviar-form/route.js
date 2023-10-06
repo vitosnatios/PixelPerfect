@@ -9,7 +9,7 @@ export async function POST(request) {
     const validatedForm = validateForm(form);
     const collection = await messagesCollection();
     await collection.insertOne({ ...validatedForm });
-    return NextResponse.json({ message: 'success' });
+    return NextResponse.json({ message: 'Enviado com sucesso.' });
   } catch (error) {
     console.log(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
