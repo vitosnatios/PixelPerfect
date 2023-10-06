@@ -2,6 +2,8 @@ import bcrypt from 'bcrypt';
 import { NextResponse } from 'next/server';
 import { err } from '../../utils/err';
 import sanitizeHtml from 'sanitize-html';
+import jwt from 'jsonwebtoken';
+import { cookies } from 'next/headers';
 
 export async function POST(request) {
   try {
@@ -16,6 +18,8 @@ export async function POST(request) {
       hashedPassword
     );
     if (!isRightPassword) err('Senha incorreta.');
+    const token = jwt.sign({ user: 'admin' }, process.env.JWT_SECRET);
+    cookies().set('jwt', token, { sameSite: 'none', secure: true });
     return NextResponse.json({ message: 'Logado com sucesso.' });
   } catch (error) {
     console.log(error);
