@@ -2,7 +2,6 @@ import React from 'react';
 
 const MessagesFromUsers = ({ msg }) => {
   const { name, email, branch, message, date } = msg;
-  console.log(msg);
   return (
     <div style={{ border: '1px solid black' }}>
       <p>{date}</p>
