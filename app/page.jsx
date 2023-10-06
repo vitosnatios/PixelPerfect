@@ -1,9 +1,5 @@
-import Button from './components/Button';
+import Form from './components/form/Form';
 
 export default function Home() {
-  return (
-    <div>
-      <Button>PixelPerfect</Button>
-    </div>
-  );
+  return <Form />;
 }

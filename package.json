@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "mongodb": "^6.1.0",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sanitize-html": "^2.11.0"
   },
   "devDependencies": {
     "@types/node": "20.8.2",
     "@types/react": "18.2.25",
+    "@types/sanitize-html": "^2.9.1",
     "typescript": "5.2.2"
   }
 }
