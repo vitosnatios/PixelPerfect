@@ -2,13 +2,17 @@ import sanitizeHtml from 'sanitize-html';
 import { NextResponse } from 'next/server';
 import { messagesCollection } from '../db-connection/messagesCollection';
 import { err } from '../../utils/err';
+import { format } from 'date-fns';
 
 export async function POST(request) {
   try {
     const form = await request.json();
     const validatedForm = validateForm(form);
     const collection = await messagesCollection();
-    await collection.insertOne({ ...validatedForm });
+    await collection.insertOne({
+      ...validatedForm,
+      date: format(new Date(), "dd/MM/yyyy 'às' HH:mm:ss"),
+    });
     return NextResponse.json({ message: 'Enviado com sucesso.' });
   } catch (error) {
     console.log(error);

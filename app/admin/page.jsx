@@ -7,8 +7,7 @@ const AdminPage = async () => {
   try {
     const token = cookies().get('jwt').value;
     const isLoggedIn = jwt.verify(token, process.env.JWT_SECRET);
-    console.log(isLoggedIn);
-    return <AdminPageComponent />;
+    return isLoggedIn ? <AdminPageComponent /> : <AdminForm />;
   } catch (error) {
     return <AdminForm />;
   }
