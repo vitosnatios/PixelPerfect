@@ -1,0 +1,35 @@
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form{
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  background-color: #f6fafb;
+  width: 600px;
+  height: 600px;
+  
+}
+.form>*{
+  max-width: 550px;
+  min-height: 2rem;
+}
+
+.requirements{
+  background-color: var(--primary-color);
+  color: #FFF;
+  padding: 2rem 1rem;
+  width: 30%;
+  height:600px;
+}
+.listRequeriments{
+  margin: 2rem;
+}
+.listRequeriments>*{
+  margin: 1rem 0;
+  font-weight: 700;
+}

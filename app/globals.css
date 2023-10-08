@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #fb6900;
+}
+
+
+a{
+  text-decoration: none;
+  color: black;
+}
+input, textarea{
+  border: 1px solid var(--primary-color);
+}
+
+textarea{
+  width: 100%;
+}
+
+select{
+  background-color:var(--primary-color);
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: 2px solid #FFF;
+}
+
+button{
+  color: #FFF;
+  margin-top:1.25rem;
+  border-radius: 5px;
+  align-self: center;
+  font-weight: 700;
+  width: 300px;
+  padding: .25rem 1.25rem;
+  border: none;
+  background-color: var(--primary-color);
+  transition: transform .2s;
+
+}
+
+button:hover{
+  transform: scale(1.2);
+}

@@ -2,7 +2,8 @@
 import useInput from '../../custom-hooks/useInput';
 import useFetch from '../../custom-hooks/useFetch';
 import Input from './Input';
-import Textarea from './Textarea';
+import Textarea from './TextArea';
+import styles from './styles/styles.module.css'
 
 const ContactForm = () => {
   const { data, loading, error, request } = useFetch();
@@ -22,6 +23,7 @@ const ContactForm = () => {
       branch: branchInput.refe.current.value,
       message: messageTextArea.refe.current.value,
     };
+
     const success = await request('/api/enviar-form', {
       method: 'POST',
       body: JSON.stringify(form),
@@ -35,15 +37,28 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Input {...nameInput} />
-      <Input {...emailInput} />
-      <Input {...branchInput} />
-      <Textarea {...messageTextArea} />
-      {data && <span>{data.message}</span>}
-      {error && <span>{error}</span>}
-      {loading ? <span>loading...</span> : <button>Enviar</button>}
-    </form>
+    <div className={styles.content}>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <h2>Informações de contato</h2>
+        <Input {...nameInput} />
+        <Input {...emailInput} />
+        <Input {...branchInput} />
+        <Textarea {...messageTextArea} />
+        {data && <span>{data.message}</span>}
+        {error && <span>{error}</span>}
+        {loading ? <span>loading...</span> : <button>Enviar</button>}
+      </form>
+      <section className={styles.requirements}>
+        <h2>Requisitos:</h2>
+        <ul className={styles.listRequeriments}>
+          <li>Nome completo</li>
+          <li>Forneça seu email principal para entramos em contato</li>
+          <li>Descreva o ramo de sua empresa ou orgnaização.</li>
+          <li>Aproveite o campo maior para descrever em detalhes o serviço esperado e o prazo esperado para conclusão do projeto. </li>
+        </ul>
+      </section>
+    </div>
+   
   );
 };
 
