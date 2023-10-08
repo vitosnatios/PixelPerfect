@@ -48,6 +48,7 @@ a{
 }
 input, textarea{
   border: 1px solid var(--primary-color);
+  padding: 0 .25rem;
 }
 
 textarea{

@@ -41,7 +41,7 @@ const ContactForm = () => {
   return (
     <div className={styles.content}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <Link href="/"><IoArrowBackOutline  size={20}/></Link>
+        <Link href="/"><IoArrowBackOutline size={20}/></Link>
         <h2>Informações de contato</h2>
         <Input {...nameInput} />
         <Input {...emailInput} />
