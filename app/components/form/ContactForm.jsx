@@ -3,8 +3,10 @@ import useInput from '../../custom-hooks/useInput';
 import useFetch from '../../custom-hooks/useFetch';
 import Input from './Input';
 import Textarea from './TextArea';
-import styles from './styles/styles.module.css'
-
+import styles from './styles/contact.module.css'
+import {IoArrowBackOutline} from "react-icons/io5"
+import Link from 'next/link';
+ 
 const ContactForm = () => {
   const { data, loading, error, request } = useFetch();
   const nameInput = useInput('nome', 'Nome');
@@ -39,6 +41,7 @@ const ContactForm = () => {
   return (
     <div className={styles.content}>
       <form className={styles.form} onSubmit={handleSubmit}>
+        <Link href="/"><IoArrowBackOutline  size={20}/></Link>
         <h2>Informações de contato</h2>
         <Input {...nameInput} />
         <Input {...emailInput} />

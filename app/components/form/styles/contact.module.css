@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.207);
 }
 
 .form{
@@ -32,4 +33,11 @@
 .listRequeriments>*{
   margin: 1rem 0;
   font-weight: 700;
+}
+.form a{
+  color: var(--primary-color);
+  position: relative;
+  top: -20px;
+  right: 20px;
+  width: 20px;
 }

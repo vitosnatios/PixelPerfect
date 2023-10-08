@@ -1,0 +1,28 @@
+.content{
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.207);
+}
+
+.form{
+  background-color: #f6fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 3px 5px 10px black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 600px;
+}
+.form input{
+  margin-top: 2rem;
+  height: 2rem;
+}
+.form a{
+  color: var(--primary-color);
+  position: relative;
+  top: -20px;
+  right: 20px;
+  width: 20px;
+}
