@@ -1,0 +1,7 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.207);
+  max-width: 1200px;
+}

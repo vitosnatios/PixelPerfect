@@ -1,6 +1,7 @@
-import LogoutButton from '../form/LogoutButton';
+import LogoutButton from '../form/form-elements/LogoutButton';
 import { messagesCollection } from '../../api/db-connection/messagesCollection';
-import MessagesFromUsers from './MessagesFromUsers';
+import MessagesFromUsers from '../MessagesFromUsers';
+
 const AdminPageComponent = async () => {
   const collection = await messagesCollection();
   const messages = await collection.find().toArray();

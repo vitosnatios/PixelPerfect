@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { deleteCookie } from 'cookies-next';
+import Button from './Button';
 
 const LogoutButton = ({ children }) => {
   const router = useRouter();
@@ -9,7 +10,7 @@ const LogoutButton = ({ children }) => {
     deleteCookie('jwt', { sameSite: 'none', secure: true });
     router.refresh();
   };
-  return <button onClick={handleLogout}>{children}</button>;
+  return <Button onClick={handleLogout}>{children}</Button>;
 };
 
 export default LogoutButton;

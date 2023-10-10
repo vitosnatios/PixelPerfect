@@ -1,5 +1,5 @@
 import { cookies } from 'next/headers';
-import AdminForm from '../components/form/AdminForm';
+import AdminForm from '../components/form/forms/AdminForm';
 import jwt from 'jsonwebtoken';
 import AdminPageComponent from '../components/pages/AdminPageComponent';
 

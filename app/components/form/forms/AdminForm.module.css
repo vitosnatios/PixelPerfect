@@ -1,11 +1,11 @@
-.content{
+.content {
   display: grid;
   place-content: center;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.207);
 }
 
-.form{
+.form {
   background-color: #f6fafb;
   padding: 2rem;
   border-radius: 12px;
@@ -15,11 +15,8 @@
   text-align: center;
   width: 600px;
 }
-.form input{
-  margin-top: 2rem;
-  height: 2rem;
-}
-.form a{
+
+.form a {
   color: var(--primary-color);
   position: relative;
   top: -20px;
