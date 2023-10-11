@@ -1,7 +1,7 @@
-import LogoutButton from "../form/form-elements/LogoutButton";
-import { messagesCollection } from "../../api/db-connection/messagesCollection";
-import MessagesFromUsers from "../MessagesFromUsers";
-import styles from "./adminpage.module.css";
+import LogoutButton from '../form/form-elements/LogoutButton';
+import { messagesCollection } from '../../api/db-connection/messagesCollection';
+import MessagesFromUsers from '../MessagesFromUsers';
+import styles from './Adminpage.module.css';
 
 const AdminPageComponent = async () => {
   const collection = await messagesCollection();

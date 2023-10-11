@@ -1,5 +1,6 @@
-import React from "react";
-import styles from "./messages.module.css";
+import React from 'react';
+import styles from './messages.module.css';
+
 const MessagesFromUsers = ({ msg }) => {
   const { name, email, branch, message, date } = msg;
   return (
