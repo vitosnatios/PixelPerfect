@@ -3,20 +3,21 @@
   padding: 2rem;
   flex-direction: column;
   flex: 1;
-  background-color: #f6fafb;
+  background-color: var(--background-color);
   height: 600px;
   min-width: 280px;
+  gap: 0.75rem;
 }
 
-.form > * {
-  max-width: 550px;
-  min-height: 2rem;
+.form > input,
+.form > textarea {
+  /* margin: 0.5rem 0 0 0; */
 }
 
 .form a {
   color: var(--primary-color);
   position: relative;
-  top: -20px;
-  right: 20px;
+  top: -0.5rem;
+  right: 0;
   width: 20px;
 }

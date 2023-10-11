@@ -1,10 +1,10 @@
 .button {
   color: #fff;
-  margin-top: 1.25rem;
   border-radius: 5px;
   align-self: center;
   font-weight: 700;
-  min-width: 240px;
+  text-align: center;
+  width: 240px;
   padding: 0.25rem 1.25rem;
   border: none;
   background-color: var(--primary-color);

@@ -1,0 +1,23 @@
+.messageCard {
+  background-color: var(--background-color);
+  width: 800px;
+  border-radius: 12px;
+  padding: 0.25rem 1rem 2rem 1rem;
+  margin: 1rem 0;
+  box-shadow: 2px 2px 5px black;
+}
+.messageCard header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.email {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.8rem;
+}

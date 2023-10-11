@@ -1,15 +1,26 @@
-import React from 'react';
-
+import React from "react";
+import styles from "./messages.module.css";
 const MessagesFromUsers = ({ msg }) => {
   const { name, email, branch, message, date } = msg;
   return (
-    <div style={{ border: '1px solid black' }}>
-      <p>{date}</p>
+    <div className={styles.messageCard}>
+      <header>
+        <span className={styles.date}>{date}</span>
+        <span className={styles.email}>{email}</span>
+      </header>
+
       <p>
-        Nome: {name} - Email: {email}
+        <strong>Nome:</strong> {name}
       </p>
-      <p>Ramo: {branch}</p>
-      <p>Mensagem: {message}</p>
+
+      <p>
+        <strong>Ramo:</strong> {branch}
+      </p>
+
+      <p>
+        <strong>Mensagem:</strong>
+        <br /> {message}
+      </p>
     </div>
   );
 };
