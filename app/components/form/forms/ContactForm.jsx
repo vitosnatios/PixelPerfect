@@ -9,6 +9,9 @@ import Link from 'next/link';
 import Requeriments from '../form-elements/Requirements';
 import Button from '../form-elements/Button';
 import Form from './Form';
+import Error from '../form-elements/Error';
+import Loading from '../form-elements/Loading';
+import Success from '../form-elements/Success';
 
 const ContactForm = () => {
   const { data, loading, error, request } = useFetch();
@@ -52,9 +55,9 @@ const ContactForm = () => {
         <Input {...emailInput} />
         <Input {...branchInput} />
         <Textarea {...messageTextArea} />
-        {data && <span>{data.message}</span>}
-        {error && <span>{error}</span>}
-        {loading ? <span>loading...</span> : <Button>Enviar</Button>}
+        {data && <Success>{data.message}</Success>}
+        {error && <Error>{error}</Error>}
+        {loading ? <Loading /> : <Button>Enviar</Button>}
       </Form>
       <Requeriments />
     </div>

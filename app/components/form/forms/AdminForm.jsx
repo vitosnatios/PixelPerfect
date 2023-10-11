@@ -8,6 +8,8 @@ import Link from 'next/link';
 import Button from '../form-elements/Button';
 import Form from './Form';
 import styles from './AdminForm.module.css';
+import Error from '../form-elements/Error';
+import Loading from '../form-elements/Loading';
 
 const AdminForm = () => {
   const router = useRouter();
@@ -31,9 +33,8 @@ const AdminForm = () => {
         </Link>
         <h1>Faça login para continuar</h1>
         <Input {...nameInput} refe={nameInput.refe} />
-        {loading && <span>Loading...</span>}
-        {error && <span>{error}</span>}
-        <Button>Entrar</Button>
+        {error && <Error>{error}</Error>}
+        {loading ? <Loading /> : <Button>Entrar</Button>}
       </Form>
     </div>
   );
